@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import Users from "./user/pages/Users.jsx";
 import NewPlace from "./places/pages/NewPlace.jsx";
 import UserPlaces from "./places/pages/UserPlaces.jsx";
+import UpdatePlace from "./places/pages/UpdatePlace.jsx";
 
 import "./index.css";
 
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       },
       { path: "/places/new", element: <NewPlace /> },
       { path: "/:userId/places", element: <UserPlaces /> },
+      { path: "/places/:placeId", element: <UpdatePlace /> },
     ],
   },
 ]);
