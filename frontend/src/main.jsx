@@ -9,6 +9,7 @@ import UserPlaces from "./places/pages/UserPlaces.jsx";
 import UpdatePlace from "./places/pages/UpdatePlace.jsx";
 
 import "./index.css";
+import Auth from "./user/pages/Auth.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "/places/new", element: <NewPlace /> },
       { path: "/:userId/places", element: <UserPlaces /> },
       { path: "/places/:placeId", element: <UpdatePlace /> },
+      { path: "/auth", element: <Auth /> },
     ],
   },
 ]);
