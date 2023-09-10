@@ -18,10 +18,6 @@ const Auth = () => {
   const [isLoginMode, setIsLoginMode] = useState(true);
   const [formState, inputHandler, setFormData] = useForm(
     {
-      name: {
-        value: "",
-        isValid: false,
-      },
       email: {
         value: "",
         isValid: false,
@@ -46,6 +42,9 @@ const Auth = () => {
         { ...formState.inputs, name: undefined },
         formState.inputs.email.isValid && formState.inputs.password.isValid
       );
+      console.log(
+        formState.inputs.email.isValid && formState.inputs.password.isValid
+      );
     } else {
       setFormData(
         {
@@ -57,6 +56,7 @@ const Auth = () => {
         },
         false
       );
+      console.log(false);
     }
 
     setIsLoginMode((prevMode) => !prevMode);

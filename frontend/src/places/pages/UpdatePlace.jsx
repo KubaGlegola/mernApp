@@ -46,6 +46,8 @@ const DUMMY_PLACES = [
 const UpdatePlace = () => {
   const placeId = useParams().placeId;
 
+  console.log(placeId);
+
   const [isLoading, setIsLoading] = useState(true);
 
   const [formState, inputHandler, setFormData] = useForm(
@@ -65,7 +67,7 @@ const UpdatePlace = () => {
   const identifiedPlace = DUMMY_PLACES.find((p) => p.id === placeId);
 
   useEffect(() => {
-    if (!identifiedPlace) {
+    if (identifiedPlace) {
       setFormData(
         {
           title: {
